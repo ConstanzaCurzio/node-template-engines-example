@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senpai testing</title>
+    <link rel="stylesheet"  type="text/css" href="/styles/main.css">
+</head>
+<body>
+    <h1>Blogs</h1>
+    <ul>
+      <% blogs.forEach((blog) => { %>
+        <li>
+          Title: <%= blog.title %>, Popular: <%= blog.popular %>
+        </li>
+      <% }) %>
+    </ul>
+
+    <ul>
+      <% for (let i = 0; i < blogs.length;  i++ ) {%>
+         <li> Title:<%= blogs[i].title %>, Popular: <%= blogs[i].popular %></li>
+      <% }; %>
+     </ul>
+    <%- include('footer', { blog: blogs[0] }) %>
+</body>
+</html>
